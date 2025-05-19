@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppMinhasCompras.Views.EditarProduto"
+             Title="{Binding Descricao}">
+    <!-- Define a página como uma ContentPage e define o título dinamicamente com binding à propriedade "Descricao" -->
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked" />
+        <!-- Adiciona um item na toolbar com o texto "Salvar", que chama o evento "ToolbarItem_Clicked" ao ser clicado -->
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout Spacing="10" Padding="10">
+        <!-- Layout de pilha vertical com espaçamento de 10 unidades entre os elementos e padding de 10 unidades -->
+
+        <Label Text="Descrição do Produto:" />
+        <!-- Rótulo para identificar o campo de descrição -->
+
+        <Entry x:Name="txt_descricao" Text="{Binding Descricao}" />
+        <!-- Campo de entrada (Entry) para a descrição do produto, vinculado à propriedade "Descricao" do ViewModel -->
+
+        <Label Text="Quantidade:" />
+        <!-- Rótulo para identificar o campo de quantidade -->
+
+        <Entry x:Name="txt_quantidade" Text="{Binding Quantidade}" Keyboard="Numeric" />
+        <!-- Campo de entrada para a quantidade, vinculado à propriedade "Quantidade" e configurado para aceitar apenas números -->
+
+        <Label Text="Preço Unitário:" />
+        <!-- Rótulo para identificar o campo de preço unitário -->
+
+        <Entry x:Name="txt_preco" Text="{Binding Preco}" Keyboard="Numeric" />
+        <!-- Campo de entrada para o preço unitário, vinculado à propriedade "Preco" e configurado para aceitar apenas números -->
+    </VerticalStackLayout>
+</ContentPage>
