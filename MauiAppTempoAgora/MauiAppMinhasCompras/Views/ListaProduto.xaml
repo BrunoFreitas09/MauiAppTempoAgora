@@ -17,14 +17,13 @@
         <SearchBar x:Name="txt_search" 
                    Placeholder="Busca de Produtos"
                    TextChanged="txt_search_TextChanged"/>
-        <!-- Barra de pesquisa para buscar produtos. O evento "txt_search_TextChanged" é acionado quando o texto é alterado -->
 
-        <ListView x:Name="lst_produtos" ItemSelected="lst_produtos_ItemSelected">
-            <!-- Lista de produtos, onde cada item selecionado dispara o evento "lst_produtos_ItemSelected" -->
+        <ListView x:Name="lst_produtos" 
+                  ItemSelected="lst_produtos_ItemSelected">
+ 
 
             <ListView.Header>
                 <Grid ColumnDefinitions="*, *, *, *, *">
-                    <!-- Cabeçalho da lista com 5 colunas de largura igual -->
                     <Label Grid.Column="0" Text="ID" />
                     <Label Grid.Column="1" Text="Descrição" />
                     <Label Grid.Column="2" Text="Preço" />
@@ -38,11 +37,9 @@
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
-                            <!-- Adiciona uma opção de contexto para remover o item ao pressionar e segurar -->
                         </ViewCell.ContextActions>
 
                         <Grid ColumnDefinitions="*, *, *, *, *">
-                            <!-- Estrutura da exibição dos itens da lista, seguindo o mesmo layout do cabeçalho -->
                             <Label Grid.Column="0" Text="{Binding Id}" />
                             <Label Grid.Column="1" Text="{Binding Descricao}" />
                             <Label Grid.Column="2" Text="{Binding Preco}" />

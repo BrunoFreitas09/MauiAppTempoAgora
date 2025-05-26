@@ -13,13 +13,13 @@ public partial class ListaProduto : ContentPage
     {
         InitializeComponent();
 
-        lst_produtos.ItemsSource = lista;
+        //lst_produtos.ItemsSource = lista;
         // Define a origem de dados da ListView como a coleção observável "lista".
     }
 
     protected async override void OnAppearing()
     {
-        try
+       /* try
         {
             lista.Clear(); // Limpa a lista antes de carregar novos dados.
 
@@ -31,7 +31,7 @@ public partial class ListaProduto : ContentPage
         catch (Exception ex)
         {
             await DisplayAlert("Ops", ex.Message, "OK"); // Exibe uma mensagem de erro caso ocorra uma exceção.
-        }
+        }*/
     }
 
     private void ToolbarItem_Clicked(object sender, EventArgs e)
@@ -105,5 +105,10 @@ public partial class ListaProduto : ContentPage
         {
             await DisplayAlert("Ops", ex.Message, "OK");
         }
+    }
+
+    private void lst_produtos_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+
     }
 }

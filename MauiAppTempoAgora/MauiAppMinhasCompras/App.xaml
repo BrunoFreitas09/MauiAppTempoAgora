@@ -1,17 +1,12 @@
-﻿ ﻿<?xml version = "1.0" encoding = "UTF-8" ?>
-<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+    <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MauiAppMinhasCompras"
              x:Class="MauiAppMinhasCompras.App">
-
-    <!-- Define o dicionário de recursos globais da aplicação -->
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Permite a fusão de múltiplos dicionários de recursos -->
             <ResourceDictionary.MergedDictionaries>
-                <!-- Importa um arquivo de cores personalizado -->
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <!-- Importa um arquivo de estilos personalizados -->
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
