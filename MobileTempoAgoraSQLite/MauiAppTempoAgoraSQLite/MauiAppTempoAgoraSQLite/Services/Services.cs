@@ -8,5 +8,6 @@ namespace MauiAppTempoAgoraSQLite.Services
 {
     internal class Services
     {
+
     }
 }
